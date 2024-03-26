@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercado PocoLibre - Notebook Dell Inspiron 3505</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div id="pantalla">
+    <div id="buscador" class="box">
+        <form action="/buscador">
+            <label>
+                Buscar artículo
+                <input type="text">
+                <input type="submit" value="Buscar">
+            </label>
+        </form>
+    </div>
+
+    <div id="imagen" class="box">
+        <img
+                id="imagen-notebook"
+                src="https://acdn.mitiendanube.com/stores/001/603/790/products/productos-web-1-producto-web-4_3-2024-02-07t191220-104-4e9d307fbe8f524de817073440037805-1024-1024.png"
+             alt="Notebook Dell Inspiron 3505">
+    </div>
+
+    <div id="info-producto" class="box">
+        <h1>Notebook Dell Inspiron 3505</h1>
+
+        <div>
+            <p>
+                Excelente Notebook Dell Inspiron 3505. Ideal para gaming.
+            </p>
+            <ul>
+                <li>Procesador AMD Ryzen 5.</li>
+                <li>Memoria RAM de 8GB.</li>
+                <li>Pantalla LED de 15.6".</li>
+                <li>Resolución de 1366x768 px.</li>
+                <li>Es antirreflejo.</li>
+            </ul>
+        </div>
+
+        <a href="https://www.dell.com">Sitio Web Fabricante</a>
+
+        <p>Precio: $999.999</p>
+    </div>
+
+    <div id="puntaje" class="box">
+        <p>Excelente producto. Puntaje: 5/5</p>
+        <p>Bastante bueno. Puntaje: 4/5</p>
+    </div>
+
+    <div id="ingreso-puntaje" class="box">
+        <form action="/puntaje">
+            <label>Puntaje</label>
+            <label>
+                <input type="radio" name="puntaje-ingresado"> 1
+            </label>
+            <label>
+                <input type="radio" name="puntaje-ingresado"> 2
+            </label>
+            <label>
+                <input type="radio" name="puntaje-ingresado"> 3
+            </label>
+            <label>
+                <input type="radio" name="puntaje-ingresado"> 4
+            </label>
+            <label>
+                <input type="radio" name="puntaje-ingresado"> 5
+            </label>
+
+            <input type="submit" value="Dar puntaje">
+        </form>
+    </div>
+</div>
+</body>
+</html>
