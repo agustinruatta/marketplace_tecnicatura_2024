@@ -13,4 +13,5 @@ img {
 
 .preview-producto {
     height: 200px;
+    border: solid black;
 }
