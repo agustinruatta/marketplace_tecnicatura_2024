@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Open Market</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="https://unpkg.com/vue@3.4.26/dist/vue.global.js"></script>
     <script src="notebook.js" defer></script>
 </head>
 <body>
@@ -21,7 +22,7 @@
     <div id="imagen" class="box">
         <img
                 id="imagen-notebook"
-                src=""
+                :src="image_url"
              alt="Notebook">
     </div>
 
@@ -29,18 +30,19 @@
         <h1 id="titulo-notebook"></h1>
 
         <div>
-            <p id="descripcion-notebook">
-            </p>
+            <p id="descripcion-notebook">{{ description }}</p>
             <ul id="opciones-notebook">
+                <li>Cantidad Ram: {{notebooksTypes[0].ramAmount}} || Precio: ARS ${{notebooksTypes[0].price}}</li>
+                <li>Cantidad Ram: {{notebooksTypes[1].ramAmount}} || Precio: ARS ${{notebooksTypes[1].price}}</li>
             </ul>
         </div>
 
-        <a href="" id="sitio-web-fabricante">Sitio Web Fabricante</a>
+        <a :href="factory_url" id="sitio-web-fabricante">Sitio Web Fabricante</a>
     </div>
 
     <div id="puntaje" class="box">
-        <p>Excelente producto. Puntaje: 5/5</p>
-        <p>Bastante bueno. Puntaje: 4/5</p>
+        <p>{{feedbacks[0].comment}}. Puntaje: {{feedbacks[0].score}}/5</p>
+        <p>{{feedbacks[1].comment}}. Puntaje: {{feedbacks[1].score}}/5</p>
     </div>
 
     <div id="ingreso-puntaje" class="box">
