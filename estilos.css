@@ -1,7 +1,7 @@
 #pantalla {
     display: grid;
     grid-template-columns: 30% auto;
-    grid-template-areas: 'buscador buscador'
+    grid-template-areas: 'buscador carro-de-compras'
                             'imagen descripcion'
                             'puntaje puntaje'
                             'ingreso-puntaje ingreso-puntaje';
@@ -14,8 +14,17 @@
     padding: 20px;
 }
 
+.imagen-miniatura {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 #buscador {
     grid-area: buscador;
+}
+
+#carro-de-compras {
+    grid-area: carro-de-compras;
 }
 
 #imagen {
