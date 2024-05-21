@@ -22,36 +22,12 @@
 
     <product-info @click-boton-compra="agregarACarro"></product-info>
 
-    <div id="puntaje" class="box">
-        <p v-for="feedback in feedbacks">{{feedback.comment}}. Puntaje: {{feedback.score}}/5</p>
-    </div>
-
-    <div id="ingreso-puntaje" class="box">
-        <form action="/puntaje">
-            <label>Puntaje</label>
-            <label>
-                <input type="radio" name="puntaje-ingresado"> 1
-            </label>
-            <label>
-                <input type="radio" name="puntaje-ingresado"> 2
-            </label>
-            <label>
-                <input type="radio" name="puntaje-ingresado"> 3
-            </label>
-            <label>
-                <input type="radio" name="puntaje-ingresado"> 4
-            </label>
-            <label>
-                <input type="radio" name="puntaje-ingresado"> 5
-            </label>
-
-            <input type="submit" value="Dar puntaje">
-        </form>
-    </div>
+    <feedback></feedback>
 </div>
 <script src="notebook.js"></script>
 <script src="./components/product-info.js"></script>
 <script src="./components/carro-de-compra.js"></script>
+<script src="./components/feedback.js"></script>
 <script>
     app.mount('#pantalla')
 </script>
