@@ -5,7 +5,6 @@
     <title>Open Market</title>
     <link rel="stylesheet" href="estilos.css">
     <script src="https://unpkg.com/vue@3.4.26/dist/vue.global.js"></script>
-    <script src="notebook.js" defer></script>
 </head>
 <body>
 <div id="pantalla">
@@ -19,48 +18,9 @@
         </form>
     </div>
 
-    <div class="box" id="carro-de-compras">
-        <h3>Carro de compras</h3>
-        <ul>
-            <li v-for="computadoraComprada in carroDeCompras">
-                Computadora {{ computadoraComprada.ramAmount }}: ${{ computadoraComprada.price }}
-            </li>
-            <li><strong>Total: ${{ totalCompra }}</strong></li>
-        </ul>
-    </div>
+    <carro-de-compra :carro-de-compras="carroDeCompras"></carro-de-compra>
 
-    <div id="imagen" class="box">
-        <img
-                id="imagen-notebook"
-                :src="urlImagen"
-                alt="Notebook">
-    </div>
-
-    <div id="info-producto" class="box">
-        <h1 id="titulo-notebook">{{title}}</h1>
-
-        <p>Precio: ${{ precio }}</p>
-
-        <div>
-            <p id="descripcion-notebook">{{ description }}</p>
-            <ul id="opciones-notebook">
-                <li v-for="(tipoNotebook, indice) in notebooksTypes" :key="indice">Cantidad Ram:
-                    {{tipoNotebook.ramAmount}} || Precio: ARS ${{tipoNotebook.price}}
-                    <button @click="seleccionarTipoNotebook(indice)">SELECCIONAR</button>
-                </li>
-            </ul>
-        </div>
-
-        <a :href="factory_url" id="sitio-web-fabricante">Sitio Web Fabricante</a>
-
-        <button @click="agregarACarro">Comprar</button>
-
-        <div>
-            <img v-for="(imagen, indice) in imagenes" class="imagen-miniatura"
-                 @mouseover="cambiarImagen(indice)"
-                 :src="imagen" :alt="'Imagen computadora ' + indice">
-        </div>
-    </div>
+    <product-info @click-boton-compra="agregarACarro"></product-info>
 
     <div id="puntaje" class="box">
         <p v-for="feedback in feedbacks">{{feedback.comment}}. Puntaje: {{feedback.score}}/5</p>
@@ -89,5 +49,11 @@
         </form>
     </div>
 </div>
+<script src="notebook.js"></script>
+<script src="./components/product-info.js"></script>
+<script src="./components/carro-de-compra.js"></script>
+<script>
+    app.mount('#pantalla')
+</script>
 </body>
 </html>
