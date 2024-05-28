@@ -27,4 +27,11 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+.box {
+  border-style: solid;
+  border-width: 2px;
+  margin: 20px;
+  padding: 20px;
+}
 </style>

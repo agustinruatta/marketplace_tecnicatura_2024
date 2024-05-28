@@ -1,5 +1,5 @@
 <template>
-  <div>
+
     <div id="puntaje" class="box">
       <p v-for="(feedback, index) in feedbacks" :key="index">
         {{ feedback.comment }}. Puntaje: {{ feedback.score }}/5
@@ -27,7 +27,6 @@
         <input type="submit" value="Dar puntaje">
       </form>
     </div>
-  </div>
 </template>
 
 <script>

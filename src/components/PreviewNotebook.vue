@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <a href="">
-      <img :src="notebook.image_url" :alt="notebook.title">
-      <strong>{{ notebook.title }}</strong>
-    </a>
-  </div>
+  <a href="">
+    <img :src="notebook.image_url" :alt="notebook.title">
+    <strong>{{ notebook.title }}</strong>
+  </a>
 </template>
 
 <script>

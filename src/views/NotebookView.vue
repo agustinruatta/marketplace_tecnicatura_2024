@@ -53,13 +53,6 @@ export default {
                             'ingreso-puntaje ingreso-puntaje';
 }
 
-.box {
-  border-style: solid;
-  border-width: 2px;
-  margin: 20px;
-  padding: 20px;
-}
-
 #buscador {
   grid-area: buscador;
 }

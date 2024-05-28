@@ -40,7 +40,7 @@ export default {
         },
         {
           "id": 2,
-          "title": "Notebook Max L5 i7 Microsoft 365 Personal ",
+          "title": "Notebook Max L5 i7 ",
           "description": "Computadora de uso personal. Intel Core i7. 480GB SATA. 8GB RAM.",
           "image_url": "https://bangho.vtexassets.com/arquivos/ids/160155/Notebook-Max-L5-i5-cuotas-sin-interes.jpg?v=637697603076200000",
           "factory_url": "https://www.bangho.com.ar/notebook-max-l5-15-6-hd-intel-core-i7-8gb-480gb-ssd-windows-11-microsoft-365/p",
@@ -57,7 +57,7 @@ export default {
         },
         {
           "id": 3,
-          "title": "Notebook N14WCE128 14\" IntelCeleron N3350 128GB Noblex",
+          "title": "Notebook N14WCE128 14",
           "description": "Procesador Intel® Celeron® N3350. Pantalla 14.1” 1366*768 TN. Memoria 4GB. Almacenamiento 128GB SSD.",
           "image_url": "https://noblex.com.ar/media/catalog/product/cache/aa999612044d357928d16abd893bc3dd/1/_/1_5_1.jpg",
           "factory_url": "https://noblex.com.ar/notebook-n14wce128-14-intelceleron-n3350-128gb-noblex.html",
@@ -74,7 +74,7 @@ export default {
         },
         {
           "id": 4,
-          "title": "Notebook Dell 3190 Intel Celeron 4Gb SSD 128Gb 11,6\" HD Windows 10",
+          "title": "Notebook Dell 3190",
           "description": "Intel Celeron N4120. Memoria: 4GB 2400MHz DDR4. Graficos Intel Integrados.",
           "image_url": "https://www.bidcom.com.ar/publicacionesML/productos/NOT00260/1000x1000-NOT00260.jpg",
           "factory_url": "https://www.bidcom.com.ar/notebooks/notebook-dell-3190-intel-celeron-4gb-ssd-128gb-11-6-pulg-windows-10",

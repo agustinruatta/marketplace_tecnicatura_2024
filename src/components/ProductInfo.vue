@@ -1,38 +1,36 @@
 <template>
-  <div>
-    <div id="imagen" class="box">
-      <img
-          id="imagen-notebook"
-          :src="urlImagen"
-          alt="Notebook">
+  <div id="imagen" class="box">
+    <img
+        id="imagen-notebook"
+        :src="urlImagen"
+        alt="Notebook">
+  </div>
+
+  <div id="info-producto" class="box">
+    <h1 id="titulo-notebook">{{ title }}</h1>
+
+    <p>Precio: $ {{ precio }}</p>
+
+    <div>
+      <p id="descripcion-notebook">{{ description }}</p>
+      <ul id="opciones-notebook">
+        <li v-for="(tipoNotebook, indice) in notebooksTypes" :key="indice">Cantidad Ram:
+          {{ tipoNotebook.ramAmount }} || Precio: ARS $ {{ tipoNotebook.price }}
+          <button @click="seleccionarTipoNotebook(indice)">SELECCIONAR</button>
+        </li>
+      </ul>
     </div>
 
-    <div id="info-producto" class="box">
-      <h1 id="titulo-notebook">{{ title }}</h1>
+    <a :href="factory_url" id="sitio-web-fabricante">Sitio Web Fabricante</a>
 
-      <p>Precio: $ {{ precio }}</p>
+    <button @click="agregarACarro">Comprar</button>
 
-      <div>
-        <p id="descripcion-notebook">{{ description }}</p>
-        <ul id="opciones-notebook">
-          <li v-for="(tipoNotebook, indice) in notebooksTypes" :key="indice">Cantidad Ram:
-            {{ tipoNotebook.ramAmount }} || Precio: ARS $ {{ tipoNotebook.price }}
-            <button @click="seleccionarTipoNotebook(indice)">SELECCIONAR</button>
-          </li>
-        </ul>
-      </div>
-
-      <a :href="factory_url" id="sitio-web-fabricante">Sitio Web Fabricante</a>
-
-      <button @click="agregarACarro">Comprar</button>
-
-      <div>
-        <img v-for="(imagen, indice) in imagenes" class="imagen-miniatura"
-             @mouseover="cambiarImagen(indice)"
-             :src="imagen" :alt="'Imagen computadora ' + indice"
-             :key="indice"
-        >
-      </div>
+    <div>
+      <img v-for="(imagen, indice) in imagenes" class="imagen-miniatura"
+           @mouseover="cambiarImagen(indice)"
+           :src="imagen" :alt="'Imagen computadora ' + indice"
+           :key="indice"
+      >
     </div>
   </div>
 </template>
