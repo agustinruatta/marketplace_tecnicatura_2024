@@ -44,6 +44,7 @@ import notebookService from "@/services/NotebookService.js";
 
 export default {
   name: 'ProductInfo',
+  emits: ['click-boton-compra'],
   data() {
     return {
       notebook: null,
