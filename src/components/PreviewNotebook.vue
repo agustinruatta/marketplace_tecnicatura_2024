@@ -1,6 +1,6 @@
 <template>
   <a href="">
-    <img :src="notebook.image_url" :alt="notebook.title">
+    <img :src="notebook.image_urls[0]" :alt="notebook.title">
     <strong>{{ notebook.title }}</strong>
   </a>
 </template>

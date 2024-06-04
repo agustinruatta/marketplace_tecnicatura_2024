@@ -30,7 +30,7 @@
     <button @click="agregarACarro">Comprar</button>
 
     <div>
-      <img v-for="(imagen, indice) in imagenes" class="imagen-miniatura"
+      <img v-for="(imagen, indice) in notebook.image_urls" class="imagen-miniatura"
            @mouseover="cambiarImagen(indice)"
            :src="imagen" :alt="'Imagen computadora ' + indice"
            :key="indice"
@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import notebookService from "@/services/NotebookService.js";
 
 export default {
   name: 'ProductInfo',
@@ -52,13 +52,13 @@ export default {
     }
   },
   async created() {
-    const response = await axios.get('https://my-json-server.typicode.com/agustinruatta/fake_json_server_db/products/1');
+    const response = await notebookService.getNotebook();
 
     this.notebook = response.data;
   },
   methods: {
     agregarACarro() {
-      const computadoraSeleccionada = this.notebooksTypes[this.indiceTipoNotebook];
+      const computadoraSeleccionada = this.notebook.notebooksTypes[this.indiceTipoNotebook];
       this.$emit('click-boton-compra', computadoraSeleccionada);
     },
     cambiarImagen(indice) {

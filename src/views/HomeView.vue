@@ -18,7 +18,7 @@
 
 <script>
 import PreviewNotebook from '@/components/PreviewNotebook.vue'
-import axios from 'axios';
+import notebookService from "@/services/NotebookService.js";
 
 export default {
   name: 'HomeView',
@@ -32,14 +32,14 @@ export default {
     }
   },
   created() {
-    axios
-        .get('https://my-json-server.typicode.com/agustinruatta/fake_json_server_db/statistics')
+    notebookService
+        .getStatistics()
         .then((response) => {
           this.totalNotebooksAmount = response.data.amount_of_products;
         })
 
-    axios
-        .get('https://my-json-server.typicode.com/agustinruatta/fake_json_server_db/products')
+    notebookService
+        .getNotebooks()
         .then((response) => {
           this.notebooks = response.data;
         })
