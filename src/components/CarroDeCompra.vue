@@ -11,22 +11,12 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex";
+
 export default {
   name: 'CarroDeCompra',
-  props: {
-    carroDeCompras: {
-      type: Array,
-      required: true,
-    }
-  },
   computed: {
-    totalCompra() {
-      let total = 0;
-      for (const compra of this.carroDeCompras) {
-        total += compra.price;
-      }
-      return total;
-    }
+    ...mapGetters(['carroDeCompras', 'totalCompra']),
   }
 }
 </script>

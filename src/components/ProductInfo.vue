@@ -27,7 +27,7 @@
 
     <a :href="notebook.factory_url" id="sitio-web-fabricante">Sitio Web Fabricante</a>
 
-    <button @click="agregarACarro">Comprar</button>
+    <button @click="agregarACarroDeCompra">Comprar</button>
 
     <div>
       <img v-for="(imagen, indice) in notebook.image_urls" class="imagen-miniatura"
@@ -41,6 +41,7 @@
 
 <script>
 import notebookService from "@/services/NotebookService.js";
+import {mapMutations} from "vuex";
 
 export default {
   name: 'ProductInfo',
@@ -50,7 +51,6 @@ export default {
       type: String
     }
   },
-  emits: ['click-boton-compra'],
   data() {
     return {
       notebook: null,
@@ -64,9 +64,10 @@ export default {
     this.notebook = response.data;
   },
   methods: {
-    agregarACarro() {
+    ...mapMutations(['agregarACarro']),
+    agregarACarroDeCompra() {
       const computadoraSeleccionada = this.notebook.notebooksTypes[this.indiceTipoNotebook];
-      this.$emit('click-boton-compra', computadoraSeleccionada);
+      this.agregarACarro(computadoraSeleccionada);
     },
     cambiarImagen(indice) {
       this.indiceImagen = indice;

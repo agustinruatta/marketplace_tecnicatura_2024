@@ -10,9 +10,9 @@
       </form>
     </div>
 
-    <CarroDeCompra :carro-de-compras="carroDeCompras"/>
+    <CarroDeCompra/>
 
-    <ProductInfo :id="id" @click-boton-compra="agregarACarro"></ProductInfo>
+    <ProductInfo :id="id"></ProductInfo>
 
     <FeedbackBox></FeedbackBox>
   </div>
@@ -38,12 +38,6 @@ export default {
   },
   data() {
     return {
-      carroDeCompras: [],
-    }
-  },
-  methods: {
-    agregarACarro(computadoraSeleccionada) {
-      this.carroDeCompras.push(computadoraSeleccionada);
     }
   },
 }
