@@ -10,8 +10,8 @@ export default {
         return client.get('/products');
     },
 
-    getNotebook() {
-        return client.get('/products/1');
+    getNotebook(id) {
+        return client.get('/products/' + id);
     },
 
     getStatistics() {

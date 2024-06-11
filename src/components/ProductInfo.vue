@@ -44,6 +44,12 @@ import notebookService from "@/services/NotebookService.js";
 
 export default {
   name: 'ProductInfo',
+  props: {
+    id: {
+      required: true,
+      type: String
+    }
+  },
   emits: ['click-boton-compra'],
   data() {
     return {
@@ -53,7 +59,7 @@ export default {
     }
   },
   async created() {
-    const response = await notebookService.getNotebook();
+    const response = await notebookService.getNotebook(this.id);
 
     this.notebook = response.data;
   },

@@ -1,8 +1,8 @@
 <template>
-  <a href="">
+  <router-link :to="{name: 'NotebookInfo', params: {id: notebook.id}}">
     <img :src="notebook.image_urls[0]" :alt="notebook.title">
     <strong>{{ notebook.title }}</strong>
-  </a>
+  </router-link>
 </template>
 
 <script>

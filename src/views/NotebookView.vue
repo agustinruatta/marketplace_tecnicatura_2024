@@ -10,9 +10,9 @@
       </form>
     </div>
 
-    <CarroDeCompra :carro-de-compras="carroDeCompras" />
+    <CarroDeCompra :carro-de-compras="carroDeCompras"/>
 
-    <ProductInfo @click-boton-compra="agregarACarro"></ProductInfo>
+    <ProductInfo :id="id" @click-boton-compra="agregarACarro"></ProductInfo>
 
     <FeedbackBox></FeedbackBox>
   </div>
@@ -25,7 +25,13 @@ import FeedbackBox from "@/components/FeedbackBox.vue";
 
 export default {
   name: 'NotebookView',
-  components:  {
+  props: {
+    id: {
+      required: true,
+      type: String,
+    }
+  },
+  components: {
     CarroDeCompra,
     ProductInfo,
     FeedbackBox,
